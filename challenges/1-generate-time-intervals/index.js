@@ -1,0 +1,3 @@
+function generateIntervals(start, end) {
+
+}
