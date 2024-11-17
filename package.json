@@ -6,11 +6,19 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["exercises", "challenges", "coding", "technical-interviews"],
+  "keywords": [
+    "exercises",
+    "challenges",
+    "coding",
+    "technical-interviews"
+  ],
   "author": "Matsu (https://github.com/devmatsu)",
   "license": "ISC",
   "repository": {
     "type": "git",
     "url": "https://github.com/devmatsu/challenges.git"
+  },
+  "dependencies": {
+    "jest": "^29.7.0"
   }
 }
