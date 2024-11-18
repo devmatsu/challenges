@@ -8,7 +8,6 @@ Given two strings representing times in the format `'day hh:mm am/pm'`, write a 
 ```
 function generateIntervals(start, end)
 ```
-
 ### Input
 - `start`: A string in the format `'day hh:mm am/pm'` representing the start time.
 - `end`: A string in the format `'day hh:mm am/pm'` representing the end time.
@@ -25,14 +24,13 @@ function generateIntervals(start, end)
 ### Days Mapping
 | Day        | Value |
 |------------|-------|
+| Sunday     | 0     |
 | Monday     | 1     |
 | Tuesday    | 2     |
 | Wednesday  | 3     |
 | Thursday   | 4     |
 | Friday     | 5     |
 | Saturday   | 6     |
-| Sunday     | 7     |
-
 
 ### Example
 ```
