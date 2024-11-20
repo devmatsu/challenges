@@ -135,5 +135,20 @@ describe('generateIntervals', () => {
     const expectedOutput2 = ['40000', '40005'];
     expect(generateIntervals(start2, end2)).toEqual(expectedOutput2);
   });
-  
+
+  test('should generate intervals for Sunday (0 as the weekday number)', () => {
+    const start = 'sun 10:00 am';
+    const end = 'sun 10:30 am';
+    const expectedOutput = [
+      '01000', '01005', '01010', '01015', '01020', '01025', '01030'
+    ];
+    expect(generateIntervals(start, end)).toEqual(expectedOutput);
+  });
+
+  test('should handle intervals crossing from Sunday to Monday', () => {
+    const start = 'sun 11:55 pm';
+    const end = 'mon 12:15 am';
+    const expectedOutput = ['02355', '02400', '02405', '02410', '02415']; // '02' is for Monday
+    expect(generateIntervals(start, end)).toEqual(expectedOutput);
+  });
 });
