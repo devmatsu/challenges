@@ -148,7 +148,7 @@ describe('generateIntervals', () => {
   test('should handle intervals crossing from Sunday to Monday', () => {
     const start = 'sun 11:55 pm';
     const end = 'mon 12:15 am';
-    const expectedOutput = ['02355', '02400', '02405', '02410', '02415']; // '02' is for Monday
+    const expectedOutput = ['02355', '10000', '10005', '10010', '10015'];
     expect(generateIntervals(start, end)).toEqual(expectedOutput);
   });
 });
