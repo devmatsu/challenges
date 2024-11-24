@@ -37,7 +37,7 @@ describe('generateIntervals', () => {
     const start = 'sun 13:00 pm';
     const end = 'sun 2:00 pm';
     expect(() => generateIntervals(start, end)).toThrowError(
-      'Invalid time format: "sun 13:00 pm". Expected format: \'day hh:mm am/pm\''
+      'Invalid hour: "13". Hours must be between 1 and 12.'
     );
   });
 
@@ -45,7 +45,7 @@ describe('generateIntervals', () => {
     const start = 'mon 10:65 am';
     const end = 'mon 11:00 am';
     expect(() => generateIntervals(start, end)).toThrowError(
-      'Invalid time format: "mon 10:65 am". Expected format: \'day hh:mm am/pm\''
+      'Invalid minute: "65". Minutes must be between 00 and 59.'
     );
   });  
 
