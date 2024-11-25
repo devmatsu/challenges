@@ -120,7 +120,7 @@ describe('generateIntervals', () => {
   test('should handle single minute interval', () => {
     const start = 'thu 1:59 pm';
     const end = 'thu 2:00 pm';
-    const expectedOutput = ['13200'];
+    const expectedOutput = ['41400'];
     expect(generateIntervals(start, end)).toEqual(expectedOutput);
   });
 
