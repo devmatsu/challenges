@@ -151,4 +151,11 @@ describe('generateIntervals', () => {
     const expectedOutput = ['02355', '10000', '10005', '10010', '10015'];
     expect(generateIntervals(start, end)).toEqual(expectedOutput);
   });
+
+  test('should handle intervals crossing from Monday to Tuesday', () => {
+    const start = 'mon 11:55 pm';
+    const end = 'tue 12:15 am';
+    const expectedOutput = ['12355', '20000', '20005', '20010', '20015'];
+    expect(generateIntervals(start, end)).toEqual(expectedOutput);
+  });
 });
